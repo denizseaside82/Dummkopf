@@ -1,0 +1,2 @@
+# Dummkopf
+Durak(Dummkopf)
