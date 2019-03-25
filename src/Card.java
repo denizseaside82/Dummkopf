@@ -1,13 +1,21 @@
 public class Card {
-    private List<String> clubs;
-    private List<String> diamonds;
-    private List<String> hearts;
-    private List<String> spades;
+    private String suit, rank;
+    private static final Random GENERATOR = new Random();
 
+    private static final String[] SUITS = {"clubs", "diamonds", "hearts", "spades"};
+    private static final String[] RANKS = {"Ace", "Jack", "Queen", "King", "10", "9", "8", "7", "6"};
+
+    //Randomly set SUITS and Ranks card
     public Card() {
-        this.clubs = new ArrayList<>(Arrays.asList("A", "K", "Q", "J", "10", "9", "8", "7", "6"));
-        this.diamonds = new ArrayList<>(Arrays.asList("A", "K", "Q", "J", "10", "9", "8", "7", "6"));
-        this.hearts = new ArrayList<>(Arrays.asList("A", "K", "Q", "J", "10", "9", "8", "7", "6"));
-        this.spades = new ArrayList<>(Arrays.asList("A", "K", "Q", "J", "10", "9", "8", "7", "6"));
+        suit = SUITS[GENERATOR.nextInt(SUITS.length)];
+        rank = RANKS[GENERATOR.nextInt(RANKS.length)];
+    }
+
+    public String getSuit() {
+        return suit;
+    }
+
+    public String getRank() {
+        return rank;
     }
 }
