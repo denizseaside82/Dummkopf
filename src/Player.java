@@ -2,9 +2,9 @@ public class Player {
     private String name;
     private int points;
 
-    public Player (String name, int points) {
+    public Player (String name) {
         this.name = name;
-        this.points = points;
+        this.points = 0;
     }
 
     public String getName () {
@@ -15,7 +15,12 @@ public class Player {
         return points;
     }
 
-    public void setPoints (int points) {
-        this.points = points;
+    public enum Players{
+        2,
+        3,
+        4,
+        5,
+        6
     }
+
 }
