@@ -8,17 +8,5 @@ public class Card {
 //        rank = RANKS[GENERATOR.nextInt(RANKS.length)];
     }
 
-    public String getSuit() {
-        return suit;
-    }
 
-    public String getRank() {
-        return rank;
-    }
-
-    public enum CardSize{
-        24,
-        36,
-        52
-    }
 }

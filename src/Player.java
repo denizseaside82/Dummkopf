@@ -15,12 +15,7 @@ public class Player {
         return points;
     }
 
-    public enum Players{
-        2,
-        3,
-        4,
-        5,
-        6
-    }
 
 }
+
+

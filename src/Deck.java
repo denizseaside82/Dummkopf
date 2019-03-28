@@ -1,3 +1,6 @@
+import java.util.ArrayList;
+import java.util.Random;
+
 public class Deck {
     //http://datagenetics.com/blog/november42014/index.html
     //https://stackoverflow.com/questions/24520782/java-shuffle-card-deck
@@ -8,11 +11,10 @@ public class Deck {
     private ArrayList<Card> cards;
     private ArrayList<Player> players;
 
-    public Deck(Card.CardSize numberOfCards, Player.Players numberOfPlayers) {
+    public Deck(int numberOfCards, int numberOfPlayers) {
         this.cards = new ArrayList<>();
         this.players = new ArrayList<>();
-        this.Card.CardSize = numberOfCards;
-        this.Player.Players = numberOfPlayers;
+
     }
 
 
