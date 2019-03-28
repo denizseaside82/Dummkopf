@@ -8,5 +8,11 @@ public class Card {
 //        rank = RANKS[GENERATOR.nextInt(RANKS.length)];
     }
 
+    public static String[] getSUITS () {
+        return SUITS;
+    }
 
+    public static String[] getRANKS () {
+        return RANKS;
+    }
 }
