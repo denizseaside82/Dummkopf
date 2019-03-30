@@ -1,12 +1,11 @@
 import java.util.ArrayList;
-import java.util.Random;
 
 public class Deck extends Card{
     //http://datagenetics.com/blog/november42014/index.html
     //https://stackoverflow.com/questions/24520782/java-shuffle-card-deck
     //https://www.geeksforgeeks.org/shuffle-a-deck-of-cards-3/
     //https://bost.ocks.org/mike/algorithms/#shuffling
-    private static final Random GENERATOR = new Random();
+
 
     private static ArrayList<Card> cards;
     //private ArrayList<Player> players;
@@ -16,7 +15,7 @@ public class Deck extends Card{
         //this.players = new ArrayList<>();
         for(int i=0; i < getSUITS().length; i++){
             for (int j=0; j < getRANKS().length; j++){
-                cards.add(new Card())
+                cards.add(new Card(getSUITS().[i], ranksj));
             }
         }
     }
