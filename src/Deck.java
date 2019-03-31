@@ -7,27 +7,15 @@ public class Deck extends Card{
     //https://bost.ocks.org/mike/algorithms/#shuffling
 
 
-    private static ArrayList<Card> cards;
-    //private ArrayList<Player> players;
+    private static ArrayList<Card> cards = new ArrayList<>();
 
-    public Deck(int numberOfCards, int numberOfPlayers) {
-        this.cards = new ArrayList<>();
-        //this.players = new ArrayList<>();
-        for(int i=0; i < getSUITS().length; i++){
-            for (int j=0; j < getRANKS().length; j++){
-                cards.add(new Card(getSUITS().[i], ranksj));
+    public Deck() {
+        for(int i=0; i < 4; i++){
+            for (int j=0; j < 14; j++){
+                cards.add(i, j);
             }
         }
     }
-
-    public static void shuffle(cards, int numberOfCards){
-        for (int i = 0; i < numberOfCards; i++){
-            int r = i + GENERATOR.nextInt(numberOfCards - i );
-
-            int temp = cards[r];
-            cards[r] = cards[i];
-            cards[i] = temp;
-        }
 
     }
 
