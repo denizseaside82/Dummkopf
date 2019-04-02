@@ -1,18 +1,13 @@
 import java.util.ArrayList;
 import java.util.Collections;
 import java.util.Stack;
+import java.util.Optional;
 
 public class Deck{
-    //http://datagenetics.com/blog/november42014/index.html
-    //https://stackoverflow.com/questions/24520782/java-shuffle-card-deck
-    //https://www.geeksforgeeks.org/shuffle-a-deck-of-cards-3/
-    //https://bost.ocks.org/mike/algorithms/#shuffling
+        private static Stack<Card> deckCards = new Stack<>();
 
-
-        private static Stack<Card> cards = new Stack<>();
-
-        private Deck() {
-            this.cards = initDeck();
+        public Deck() {
+            this.deckCards = initDeck();
         }
 
         private Stack<Card> initDeck() {
@@ -26,5 +21,10 @@ public class Deck{
 
         }
             return deckCards;
+    }
+
+    public Optional<Card> deal() {
+        return this.deckCards.empty() ? Optional.empty() :
+                Optional.of(this.deckCards.pop());
     }
 }
