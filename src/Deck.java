@@ -18,6 +18,7 @@ public class Deck{
                 }
 
                 Collections.shuffle(deckCards);
+                System.out.println(deckCards);
 
         }
             return deckCards;
