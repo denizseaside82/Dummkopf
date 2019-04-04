@@ -18,14 +18,14 @@ public class Deck{
                 }
 
                 Collections.shuffle(deckCards);
-                System.out.println(deckCards);
+                //System.out.println(deckCards);
 
         }
             return deckCards;
     }
 
-    public Optional<Card> deal() {
-        return this.deckCards.empty() ? Optional.empty() :
-                Optional.of(this.deckCards.pop());
-    }
+//    public Optional<Card> deal() {
+//        return this.deckCards.empty() ? Optional.empty() :
+//                Optional.of(this.deckCards.pop());
+//    }
 }
