@@ -1,29 +1,56 @@
-import java.util.ArrayList;
-import java.util.Collections;
-import java.util.Stack;
-import java.util.Optional;
+import java.util.*;
 
 public class Deck{
-        private static Stack<Card> deckCards = new Stack<>();
+    private static final int NUMBER_OF_CARDS = 52;
+    private static Card[] cards = new Card[NUMBER_OF_CARDS];
+    private static final Random GENERATOR = new Random();
 
-        public Deck() {
-            this.deckCards = initDeck();
-        }
+    static Card[] initDeck() {
+        int count = 0;
 
-        private Stack<Card> initDeck() {
-            final Stack<Card> deckCards = new Stack<>();
-            for (final Card.Suit suit: Card.Suit.values()){
-                for(final Card.Rank rank: Card.Rank.values()){
-                    deckCards.push(Card.random());
+        for(final Card.Suit suit: Card.Suit.values()){
+            for (final Card.Rank rank: Card.Rank.values()) {
+                    Card card = new Card(rank, suit);
+                    cards[count] = card;
+                    count++;
                 }
-
-                Collections.shuffle(deckCards);
-                //System.out.println(deckCards);
-
+            }
+            return cards;
         }
-            return deckCards;
+
+    static Card[] shuffle(Card[] deckOfCards) {
+        int j;
+
+        for(int i=0; i<NUMBER_OF_CARDS; i++){
+            j = GENERATOR.nextInt(NUMBER_OF_CARDS);
+            Card tempCard = cards[i];
+            cards[i] = cards[j];
+            cards[j] = tempCard;
+        }
+        return cards;
     }
 
+
+    //        private static Stack<Card> deckCards = new Stack<>();
+//
+//        public Deck() {
+//            this.deckCards = initDeck();
+//        }
+//
+//        private Stack<Card> initDeck() {
+//            final Stack<Card> deckCards = new Stack<>();
+//            for (final Card.Suit suit: Card.Suit.values()){
+//                for(final Card.Rank rank: Card.Rank.values()){
+//                    deckCards.push(Card.random());
+//                }
+//
+//                Collections.shuffle(deckCards);
+//                //System.out.println(deckCards);
+//
+//        }
+//            return deckCards;
+//    }
+//
 //    public Optional<Card> deal() {
 //        return this.deckCards.empty() ? Optional.empty() :
 //                Optional.of(this.deckCards.pop());

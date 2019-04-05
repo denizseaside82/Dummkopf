@@ -1,21 +1,19 @@
-import java.util.Random;
-
 public class Card {
     private final Rank rank;
     private final Suit suit;
 
-    private static final Random GENERATOR = new Random();
+
 
     public Card(Rank rank, Suit suit) {
         this.rank = rank;
         this.suit = suit;
     }
 
-    public static Card random (){
-        Rank rank = Rank.values()[GENERATOR.nextInt(Rank.values().length)];
-        Suit suit = Suit.values()[GENERATOR.nextInt(Suit.values().length)];
-        return new Card(rank, suit);
-    }
+//    public static Card random (){
+//        Rank rank = Rank.values()[GENERATOR.nextInt(Rank.values().length)];
+//        Suit suit = Suit.values()[GENERATOR.nextInt(Suit.values().length)];
+//        return new Card(rank, suit);
+//    }
 
     public enum Color{
         RED, BLACK
@@ -60,5 +58,10 @@ public class Card {
         public String getDisplayName() {
             return displayName;
         }
+    }
+
+    @Override
+    public String toString () {
+        return rank + " of " + suit;
     }
 }
