@@ -2,18 +2,10 @@ public class Card {
     private final Rank rank;
     private final Suit suit;
 
-
-
     public Card(Rank rank, Suit suit) {
         this.rank = rank;
         this.suit = suit;
     }
-
-//    public static Card random (){
-//        Rank rank = Rank.values()[GENERATOR.nextInt(Rank.values().length)];
-//        Suit suit = Suit.values()[GENERATOR.nextInt(Suit.values().length)];
-//        return new Card(rank, suit);
-//    }
 
     public enum Color{
         RED, BLACK
