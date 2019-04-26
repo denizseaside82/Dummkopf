@@ -1,10 +1,19 @@
-import java.util.stream.IntStream;
+import java.util.Scanner;
 
 public class Main {
     public static void main (String[] args) {
-//        final Deck deck = new Deck();
-//        final int numCardsToDeal = 52;
-//        IntStream.range(0, numCardsToDeal).forEach(n -> System.out.println(deck.deal()));
+        Scanner scanner = new Scanner(System.in);
+
+        //Ask for a number of Players
+        System.out.println("Number of Players");
+        int numberOfPlayers = scanner.nextInt();
+        Player[] players = new Player[numberOfPlayers];
+
+        //Ask for a number of Cards
+        System.out.println("Number of Cards (24/36/52)");
+        int numberOfCards = scanner.nextInt();
+        Card[] cards = new Card[numberOfCards];
+
 
         Card[] deck = Deck.initDeck();
 
@@ -12,7 +21,9 @@ public class Main {
             System.out.println(deck[i]);
         }
 
-        Card[] shuffleCard = Deck.shuffle(deck);
+        System.out.println("========================");
+
+        Card[] shuffleCard = Deck.shuffle();
         for(int i = 0; i < shuffleCard.length; i++){
             System.out.println(shuffleCard[i]);
         }

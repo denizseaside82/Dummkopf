@@ -18,7 +18,7 @@ public class Deck{
             return cards;
         }
 
-    static Card[] shuffle(Card[] deckOfCards) {
+    static Card[] shuffle() {
         int j;
 
         for(int i=0; i<NUMBER_OF_CARDS; i++){
