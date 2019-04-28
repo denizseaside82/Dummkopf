@@ -1,14 +1,14 @@
 import java.util.*;
 
 public class Deck{
-    private final int NUMBER_OF_CARDS;
+    private static final int NUMBER_OF_CARDS = 52;
     private static Card[] cards;
     private static final Random GENERATOR = new Random();
 
-    public Deck (int NUMBER_OF_CARDS) {
-        this.NUMBER_OF_CARDS = NUMBER_OF_CARDS;
-        cards = new Card[this.NUMBER_OF_CARDS];
-    }
+//    public Deck (int NUMBER_OF_CARDS) {
+//        this.NUMBER_OF_CARDS = NUMBER_OF_CARDS;
+//        cards = new Card[this.NUMBER_OF_CARDS];
+//    }
 
     static Card[] initDeck() {
         int count = 0;
