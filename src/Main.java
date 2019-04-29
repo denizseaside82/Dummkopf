@@ -15,7 +15,7 @@ public class Main {
         Deck cards = new Deck(numberOfCards);
 
 
-        Card[] deck = Deck.initDeck();
+        Card[] deck = cards.initDeck();
 
         for(int i = 0; i < deck.length; i++){
             System.out.println(deck[i]);
@@ -23,7 +23,7 @@ public class Main {
 
         System.out.println("========================");
 
-        Card[] shuffleCard = Deck.shuffle();
+        Card[] shuffleCard = cards.shuffle();
         for(int i = 0; i < shuffleCard.length; i++){
             System.out.println(shuffleCard[i]);
         }
