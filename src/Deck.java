@@ -13,23 +13,17 @@ public class Deck{
     public Card[] initDeck() {
         int count = 0;
 
-        for(int i=NUMBER_OF_CARDS; i < Card.Suit.values().length; i++){
-            for (int j=NUMBER_OF_CARDS; i<Card.Rank.values().length; j++){
-                Card card = new Card();
-                cards[count] = card;
-                count++;
+        while(count != NUMBER_OF_CARDS) {
+            for (final Card.Suit suit : Card.Suit.values()) {
+                for (final Card.Rank rank : Card.Rank.values()) {
+                    Card card = new Card(rank, suit);
+                    cards[count] = card;
+                    count++;
+                }
             }
         }
-
-//        for(final Card.Suit suit: Card.Suit.values()){
-//            for (final Card.Rank rank: Card.Rank.values()) {
-//                    Card card = new Card(rank, suit);
-//                    cards[count] = card;
-//                    count++;
-//                }
-//            }
-            return cards;
-        }
+        return cards;
+    }
 
     public Card[] shuffle() {
         int j;
