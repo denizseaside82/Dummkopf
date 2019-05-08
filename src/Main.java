@@ -17,15 +17,16 @@ public class Main {
 
         Card[] deck = cards.initDeck();
 
-        for(int i = 0; i < deck.length; i++){
-            System.out.println(deck[i]);
-        }
-
-        System.out.println("========================");
+//        for(int i = 0; i < deck.length; i++){
+//            System.out.println(deck[i]);
+//        }
+//
+//        System.out.println("========================");
 
         Card[] shuffleCard = cards.shuffle();
-        for(int i = 0; i < shuffleCard.length; i++){
-            System.out.println(shuffleCard[i]);
-        }
+
+//        for(int i = 0; i < shuffleCard.length; i++){
+//            System.out.println(shuffleCard[i]);
+//        }
     }
 }
