@@ -3,14 +3,14 @@ public class Player {
     private int numberOfPlayers;
     private int points;
 
-    public Player (int numberOfPlayers) {
-        this.numberOfPlayers = numberOfPlayers;
-        this.points = 0;
-    }
+//    public Player (int numberOfPlayers) {
+//        this.numberOfPlayers = numberOfPlayers;
+//        this.points = 0;
+//    }
 
-    public Player(String name, int points) {
+    public Player(String name) {
         this.name = name;
-        this.points = points;
+        this.points = 0;
     }
 
     public String getName () {

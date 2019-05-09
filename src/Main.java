@@ -7,7 +7,7 @@ public class Main {
         //Ask for a number of Players
         System.out.println("Number of Players");
         int numberOfPlayers = scanner.nextInt();
-        Player players = new Player(numberOfPlayers);
+        Player[] players = new Player[numberOfPlayers];
 
         //Ask for a number of Cards
         System.out.println("Number of Cards (24/36/52)");
