@@ -37,29 +37,13 @@ public class Deck{
         return cards;
     }
 
-//    public ArrayList<Deck> dealAllCards(int numberOfPlayers)
-//    {
-//        ArrayList<Deck> playerHands = new ArrayList<>(numberOfPlayers);
-//        ArrayList<Card> shuffledDeck = new ArrayList<>(cards);
-//
-//        int cardsPerPlayer = shuffledDeck.size()/numberOfPlayers; // to be subtracted by 1 after dealing remaining cards
-//        int remainingCards = shuffledDeck.size()%numberOfPlayers;
-//
-//        Collections.shuffle(shuffledDeck);
-//
-//        for (int player = 0; player < numberOfPlayers; ++player)
-//        {
-//            if (player == remainingCards)
-//            {
-//                --cardsPerPlayer; // all remaining cards dealed
-//            }
-//
-//            Deck hand = new Deck(shuffledDeck.subList(0, cardsPerPlayer + 1));
-//            shuffledDeck.removeAll(hand.cards);
-//
-//            playerHands.add(hand);
-//        }
-//
-//        return playerHands;
-//    }
+    Card[] shuffleDeckToPlayers(int numberOfPlayers, int cardsToBeDealed){
+        Card[] tempCard = new Card[NUMBER_OF_CARDS];
+        for(int i=0; i < numberOfPlayers; i++){
+            for(int j=0; j< cardsToBeDealed; j++){
+                cards[i+j*6] = tempCard[i+j*6];
+            }
+        }
+        return cards;
+    }
 }

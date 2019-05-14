@@ -5,9 +5,12 @@ public class Main {
         Scanner scanner = new Scanner(System.in);
 
         //Ask for a number of Players
-        System.out.println("Number of Players");
-        int numberOfPlayers = scanner.nextInt();
-        Player[] players = new Player[numberOfPlayers];
+//        System.out.println("Number of Players");
+//        int numberOfPlayers = scanner.nextInt();
+//        Player[] players = new Player[numberOfPlayers];
+
+        List<Player> players = new ArrayList<Player>();
+
 
         //Ask for a number of Cards
         System.out.println("Number of Cards (24/36/52)");
