@@ -37,10 +37,10 @@ public class Deck{
         return cards;
     }
 
-    Card[] shuffleDeckToPlayers(int numberOfPlayers, int cardsToBeDealed){
-        Card[] tempCard = new Card[NUMBER_OF_CARDS];
+    public Card[] shuffleDeckToPlayers(int numberOfPlayers){
+        Card[] tempCard = cards;
         for(int i=0; i < numberOfPlayers; i++){
-            for(int j=0; j< cardsToBeDealed; j++){
+            for(int j=0; j < 6; j++){
                 cards[i+j*6] = tempCard[i+j*6];
             }
         }
