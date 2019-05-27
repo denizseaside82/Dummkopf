@@ -18,7 +18,9 @@ public class Deck{
                 for (final Card.Rank rank : Card.Rank.values()) {
                     Card card = new Card(rank, suit);
                     cards[count] = card;
+                    System.out.println(count + "" + cards[count]);
                     count++;
+
                 }
             }
         }
