@@ -9,13 +9,15 @@ public class Main {
         int numberOfPlayers = scanner.nextInt();
 
 //      Player[] players = new Player[numberOfPlayers];
-        ArrayList<Player> players = new ArrayList<Player>(numberOfPlayers);
+//        ArrayList<String> players = new ArrayList<>(numberOfPlayers);
 
         //Based on number of players, set players name
         int count=0;
         while(count < numberOfPlayers){
+            System.out.println("Please enter the names");
             String playerName = scanner.next();
-            players.add(playerName);
+            new Player(playerName);
+            count++;
         }
 
         //Ask for a number of Cards
@@ -31,6 +33,6 @@ public class Main {
 //        }
 //
         //Deal 6 of shuffled cards to numberOfPlayers
-        shuffleDeckToPlayers(numberOfPlayers);
+        cards.shuffleDeckToPlayers(numberOfPlayers);
     }
 }
