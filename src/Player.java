@@ -21,9 +21,6 @@ public class Player {
         return points;
     }
 
-    public void dealCards(Card cards){
-
-    }
 }
 
 
