@@ -4,8 +4,7 @@ import java.util.List;
 public class Player {
     private String name;
     private int points;
-//    private Hand hand;
-    private final List<Card> hand;
+    private List<Card> hand;
 
     public Player(String name) {
         this.name = name;
@@ -21,6 +20,13 @@ public class Player {
         return points;
     }
 
+    public List<Card> getHand(){
+        return hand;
+    }
+
+    public void setHand(List<Card> dealtHand){
+        hand = dealtHand;
+    }
 }
 
 
