@@ -23,5 +23,14 @@ public class Game {
         }
     }
 
+    public void createDeck(int numberOfPlayers,List<Player> players){
+        System.out.println("Number of Cards (24/36/52)");
+        int numberOfCards = scanner.nextInt();
+
+        Dealer newDeck = new Dealer(numberOfCards, numberOfPlayers);
+        newDeck.shuffleDeck();
+        newDeck.dealShuffledCardsToPlayers(players);
+    }
+
 
 }
