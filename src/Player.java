@@ -24,9 +24,9 @@ public class Player {
         return hand;
     }
 
-    public void setHand(List<Card> dealtHand){
-        hand = dealtHand;
-    }
+//    public void setHand(List<Card> dealtHand){
+//        hand = dealtHand;
+//    }
 }
 
 
