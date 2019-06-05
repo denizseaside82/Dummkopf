@@ -9,16 +9,20 @@ public class Game {
 
     public List<Player> createPlayers(){
         Scanner scanner = new Scanner(System.in);
-        System.out.println("Number of Players");
+        System.out.println("Number of players(up to 6)");
         numberOfPlayers = scanner.nextInt();
-
-        int count=0;
-        while(count < numberOfPlayers){
-            System.out.println("Please enter the names");
-            String playerName = scanner.next();
-            players.add(new Player(playerName));
-            count++;
+        if(numberOfPlayers <= 6) {
+            int count = 0;
+            while (count < numberOfPlayers) {
+                System.out.println("Please enter the names");
+                String playerName = scanner.next();
+                players.add(new Player(playerName));
+                count++;
+            }
+        }else{
+            System.out.println("More than " + numberOfPlayers + " is not allowed");
         }
+
         return players;
     }
 
