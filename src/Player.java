@@ -24,7 +24,11 @@ public class Player {
         return hand;
     }
 
-//    public void setHand(List<Card> dealtHand){
+    public void setHand(List<Card> hand) {
+        this.hand = hand;
+    }
+
+    //    public void setHand(List<Card> dealtHand){
 //        hand = dealtHand;
 //    }
 }

@@ -14,7 +14,6 @@ public class Main {
         //Play clockwise
 
         //Shuffle deck and deal each player 6 cards
-        newGame.
 
         //Let the bottom card of the stock is turned and placed face up on the table
 

@@ -18,8 +18,8 @@ public class Dealer {
         Collections.shuffle(deck.getCards());
     }
 
-    public void dealShuffledCardsToPlayers(List<Player> players){
-        ArrayList<Card> tempCard = deck.getCards();
+    public void dealShuffledCardsToPlayers(List<Card> players){
+        List<Card> tempCard = deck.getCards();
         for(int i=0; i < players.size(); i++){
             for(int j=0; j < 6; j++){
                 players.add(tempCard.get(i+j*6));

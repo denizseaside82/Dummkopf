@@ -28,10 +28,13 @@ public class Game {
 
     public void createDeck(List<Player> players){
         System.out.println("Number of Cards (24/36/52)");
+        Scanner scanner = new Scanner(System.in);
         int numberOfCards = scanner.nextInt();
 
         Dealer newDeck = new Dealer(numberOfCards, numberOfPlayers);
         newDeck.shuffleDeck();
-        newDeck.dealShuffledCardsToPlayers(players);
+        for(Player p : players) {
+            newDeck.dealShuffledCardsToPlayers(players);
+        }
     }
 }
