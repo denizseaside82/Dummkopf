@@ -19,11 +19,12 @@ public class Game {
                 players.add(new Player(playerName));
                 count++;
             }
+            return players;
         }else{
             System.out.println("More than " + numberOfPlayers + " is not allowed");
+            return null;
         }
 
-        return players;
     }
 
     public void createDeck(List<Player> players){
@@ -33,8 +34,6 @@ public class Game {
 
         Dealer newDeck = new Dealer(numberOfCards, numberOfPlayers);
         newDeck.shuffleDeck();
-        for(Player p : players) {
-            newDeck.dealShuffledCardsToPlayers(players);
-        }
+        newDeck.dealShuffledCardsToPlayers(players);
     }
 }

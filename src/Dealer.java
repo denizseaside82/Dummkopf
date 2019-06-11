@@ -1,7 +1,6 @@
 import java.util.ArrayList;
 import java.util.Collections;
 import java.util.List;
-import java.util.Scanner;
 
 public class Dealer {
     private Deck deck;
@@ -15,15 +14,18 @@ public class Dealer {
     }
 
     public void shuffleDeck(){
-        Collections.shuffle(deck.getCards());
+        Collections.shuffle(deck.getDeck());
     }
 
-    public void dealShuffledCardsToPlayers(List<Card> players){
-        List<Card> tempCard = deck.getCards();
-        for(int i=0; i < players.size(); i++){
-            for(int j=0; j < 6; j++){
-                players.add(tempCard.get(i+j*6));
-            }
+    public void dealShuffledCardsToPlayers(List<Player> players){
+//        List<Card> tempCard = deck.getDeck();
+//        for(int i=0; i < players.size(); i++){
+//            for(int j=0; j < 6; j++){
+//                players.add(tempCard.remove(i+j*6));
+//            }
+//        }
+        for(Player player: players){
+            player.setHand(deck.deal(6));
         }
     }
 }

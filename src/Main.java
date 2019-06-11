@@ -9,7 +9,15 @@ public class Main {
         List<Player> players = newGame.createPlayers();
 
         //Let user decide the number of cards set either 24 or 36 or 52 and create deck
-        newGame.createDeck(players);
+        if(players != null){
+            newGame.createDeck(players);
+
+            for (Player player: players){
+                System.out.println(player.getHand());
+            }
+        }
+
+
 
         //Play clockwise
 
