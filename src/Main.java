@@ -12,8 +12,8 @@ public class Main {
         if(players != null){
             newGame.createDeck(players);
 
-            for (Player player: players){
-                System.out.println(player.getHand());
+                for (Player player: players){
+                System.out.println(player.toString());
             }
         }
 

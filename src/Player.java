@@ -31,6 +31,19 @@ public class Player {
     //    public void setHand(List<Card> dealtHand){
 //        hand = dealtHand;
 //    }
+
+    @Override
+    public String toString() {
+        return "Player{" +
+                "hand=" + hand +
+                '}';
+//        String tempCard = "";
+//        for(Card hand: hand){
+//            tempCard = hand.toString();
+//        }
+//
+//        return tempCard;
+    }
 }
 
 

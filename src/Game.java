@@ -21,7 +21,7 @@ public class Game {
             }
             return players;
         }else{
-            System.out.println("More than " + numberOfPlayers + " is not allowed");
+            System.out.println("More than 6 players are not allowed");
             return null;
         }
 
