@@ -25,7 +25,9 @@ public class Dealer {
 //            }
 //        }
         for(Player player: players){
-            player.setHand(deck.deal(6));
+            for(int i= 0; i<6; i++) {
+                player.setHand(deck.deal(6));
+            }
         }
     }
 }
