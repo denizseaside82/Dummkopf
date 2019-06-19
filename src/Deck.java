@@ -22,7 +22,10 @@ public class Deck{
 
     public List<Card> deal(int size){
         List<Card> hand = new ArrayList<>(size);
-        hand.add(deck.remove(size));
+        Random rnd = new Random();
+        for(int dealCount=0; dealCount < size; dealCount++){
+            hand.add(deck.remove(rnd.nextInt(deck.size())));
+        }
         return hand;
     }
 
@@ -36,26 +39,4 @@ public class Deck{
         }
         return builder.toString();
     }
-
-//    public Card[] shuffle() {
-//        int j;
-//
-//        for(int i=0; i<NUMBER_OF_CARDS; i++){
-//            j = GENERATOR.nextInt(NUMBER_OF_CARDS);
-//            Card tempCard = deck[i];
-//            deck[i] = deck[j];
-//            deck[j] = tempCard;
-//        }
-//        return deck;
-//    }
-
-//    public Card[] shuffleDeckToPlayers(int numberOfPlayers){
-//        Card[] tempCard = deck;
-//        for(int i=0; i < numberOfPlayers; i++){
-//            for(int j=0; j < 6; j++){
-//                deck[i+j*6] = tempCard[i+j*6];
-//            }
-//        }
-//        return deck;
-//    }
 }

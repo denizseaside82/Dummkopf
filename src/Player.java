@@ -25,25 +25,15 @@ public class Player {
 
     public void setHand(List<Card> hand) {
         this.hand = hand;
-        System.out.println(hand);
     }
 
-    //    public void setHand(List<Card> dealtHand){
-//        hand = dealtHand;
-//    }
 
-//    @Override
-//    public String toString() {
-//        return "Player{" +
-//                "hand=" + hand +
-//                '}';
-////        String tempCard = "";
-////        for(Card hand: hand){
-////            tempCard = hand.toString();
-////        }
-////
-////        return tempCard;
-//    }
+    public void showHand(){
+        for(int i=0; i<this.hand.size(); i++){
+            System.out.println(this.hand.get(i));
+        }
+    }
+
 }
 
 

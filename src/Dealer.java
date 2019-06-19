@@ -18,16 +18,8 @@ public class Dealer {
     }
 
     public void dealShuffledCardsToPlayers(List<Player> players){
-//        List<Card> tempCard = deck.getDeck();
-//        for(int i=0; i < players.size(); i++){
-//            for(int j=0; j < 6; j++){
-//                players.add(tempCard.remove(i+j*6));
-//            }
-//        }
         for(Player player: players){
-            for(int i= 0; i<6; i++) {
                 player.setHand(deck.deal(6));
-            }
         }
     }
 }
