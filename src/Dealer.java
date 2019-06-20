@@ -22,4 +22,8 @@ public class Dealer {
                 player.setHand(deck.deal(6));
         }
     }
+
+    public Card getTrump(){
+        return deck.getDeck().get(0);
+    }
 }

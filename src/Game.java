@@ -24,7 +24,6 @@ public class Game {
             System.out.println("More than 6 players are not allowed");
             return null;
         }
-
     }
 
     public void createDeck(List<Player> players){
@@ -32,8 +31,13 @@ public class Game {
         Scanner scanner = new Scanner(System.in);
         int numberOfCards = scanner.nextInt();
 
-        Dealer newDeck = new Dealer(numberOfCards, numberOfPlayers);
-        newDeck.shuffleDeck();
-        newDeck.dealShuffledCardsToPlayers(players);
+        dealer = new Dealer(numberOfCards, numberOfPlayers);
+        dealer.shuffleDeck();
+        dealer.dealShuffledCardsToPlayers(players);
+    }
+
+    public void showTrump(){
+        Card trump = dealer.getTrump();
+        System.out.println("After shuffling the cards to players: The trump is " + trump);
     }
 }

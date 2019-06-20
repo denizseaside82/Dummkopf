@@ -17,6 +17,8 @@ public class Main {
                     player.showHand();
                     System.out.println("\n");
             }
+
+            newGame.showTrump();
         }
 
         //Play clockwise
