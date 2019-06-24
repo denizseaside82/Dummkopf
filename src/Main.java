@@ -1,6 +1,4 @@
-import java.util.ArrayList;
 import java.util.List;
-import java.util.Scanner;
 
 public class Main {
     public static void main (String[] args) {
@@ -8,7 +6,7 @@ public class Main {
         Game newGame = new Game();
         List<Player> players = newGame.createPlayers();
 
-        //Let user decide the number of cards set either 24 or 36 or 52 and create deck
+        //Create deck
         if(players != null){
             newGame.createDeck(players);
 
@@ -22,7 +20,7 @@ public class Main {
         }
 
         //Play clockwise
-
+        newGame.attacker();
         //Shuffle deck and deal each player 6 cards
 
         //Let the bottom card of the stock is turned and placed face up on the table

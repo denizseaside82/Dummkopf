@@ -4,6 +4,7 @@ public class Player {
     private String name;
     private int points;
     private List<Card> hand;
+    private static final Random GENERATOR = new Random();
 
     public Player(String name) {
         this.name = name;
@@ -32,6 +33,11 @@ public class Player {
         for(int i=0; i<this.hand.size(); i++){
             System.out.println(this.hand.get(i));
         }
+    }
+
+    public void attack(){
+        Card attackCard = hand.remove(GENERATOR.nextInt(hand.size()));
+        System.out.println(attackCard);
     }
 
 }

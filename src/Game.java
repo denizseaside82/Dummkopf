@@ -4,10 +4,12 @@ import java.util.Scanner;
 
 public class Game {
     private Dealer dealer;
-    private List<Player> players = new ArrayList<>();
     private int numberOfPlayers;
+    private Player player;
 
     public List<Player> createPlayers(){
+        List<Player> players = new ArrayList<>();
+
         Scanner scanner = new Scanner(System.in);
         System.out.println("Number of players(up to 6)");
         numberOfPlayers = scanner.nextInt();
@@ -35,5 +37,9 @@ public class Game {
     public void showTrump(){
         Card trump = dealer.getTrump();
         System.out.println("After shuffling the cards to players: The trump is " + trump);
+    }
+
+    public void attacker(){
+        player.attack();
     }
 }
