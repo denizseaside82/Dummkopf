@@ -1,6 +1,6 @@
 # Dummkopf
  - Player: 2-6
- - Cards: 24-36-52
+ - Cards: 36
  - Play: Clockwise
 
 SETUP

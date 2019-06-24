@@ -2,16 +2,15 @@ import java.util.*;
 
 public class Deck{
     private List<Card> deck;
-//    private static final Random GENERATOR = new Random();
-    public Deck (int numberOfCards) {
-        deck = new ArrayList<>(numberOfCards);
+    private static final Random GENERATOR = new Random();
+    private static final int DECK_SIZE = 36;
 
-        int count = 0;
+    public Deck () {
+        deck = new ArrayList<>(DECK_SIZE);
 
         for (final Card.Suit suit : Card.Suit.values()) {
             for (final Card.Rank rank : Card.Rank.values()) {
                 deck.add(new Card(rank, suit));
-                count++;
             }
         }
     }
@@ -22,11 +21,14 @@ public class Deck{
 
     public List<Card> deal(int size){
         List<Card> hand = new ArrayList<>(size);
-        Random rnd = new Random();
         for(int dealCount=0; dealCount < size; dealCount++){
-            hand.add(deck.remove(rnd.nextInt(deck.size())));
+            hand.add(deck.remove(GENERATOR.nextInt(deck.size())));
         }
         return hand;
+    }
+
+    public Card trump(){
+        return deck.remove(0);
     }
 
     @Override
