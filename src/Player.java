@@ -6,6 +6,9 @@ public class Player {
     private List<Card> hand;
     private static final Random GENERATOR = new Random();
 
+    public Player() {
+    }
+
     public Player(String name) {
         this.name = name;
         this.points = 0;
@@ -35,10 +38,11 @@ public class Player {
         }
     }
 
-    public void attack(){
-        Card attackCard = hand.remove(GENERATOR.nextInt(hand.size()));
-        System.out.println(attackCard);
-    }
+//    public Card attack(){
+//        List<Card> attack = new ArrayList<>(1);
+//        Card attackCard = attack.add(hand.remove(GENERATOR.nextInt(1)));
+//        return attackCard;
+//    }
 
 }
 

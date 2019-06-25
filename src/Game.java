@@ -5,7 +5,7 @@ import java.util.Scanner;
 public class Game {
     private Dealer dealer;
     private int numberOfPlayers;
-    private Player player;
+    private Player player = new Player();
 
     public List<Player> createPlayers(){
         List<Player> players = new ArrayList<>();
@@ -39,7 +39,7 @@ public class Game {
         System.out.println("After shuffling the cards to players: The trump is " + trump);
     }
 
-    public void attacker(){
-        player.attack();
-    }
+//    public void attack(List<Player> players){
+//        System.out.println(player.attack());
+//    }
 }
