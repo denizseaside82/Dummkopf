@@ -36,7 +36,7 @@ public class Deck{
         StringBuilder builder = new StringBuilder();
         for(int i = 0; i < deck.size(); i++){
             builder.append(i + " ");
-            builder.append(deck.get(i));
+            builder.append(deck.get(i).toString());
             builder.append(System.getProperty("line.separator"));
         }
         return builder.toString();

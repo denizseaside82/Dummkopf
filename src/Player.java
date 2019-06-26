@@ -44,6 +44,13 @@ public class Player {
 //        return attackCard;
 //    }
 
+//    for(Card c : pack) {
+//        if(c != null && c.getSuit().equals(suit)){
+//            cards.add(c);
+//        }
+//    }
+//    https://stackoverflow.com/questions/4659316/how-to-find-all-the-cards-of-a-suit-specified-by-string-e-g-spades-in-java
+
 }
 
 

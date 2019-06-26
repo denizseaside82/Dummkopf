@@ -20,7 +20,7 @@ public class Main {
         }
 
         //Play clockwise
-
+        newGame.attack(players);
         //Shuffle deck and deal each player 6 cards
 
         //Let the bottom card of the stock is turned and placed face up on the table

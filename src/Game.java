@@ -5,7 +5,6 @@ import java.util.Scanner;
 public class Game {
     private Dealer dealer;
     private int numberOfPlayers;
-    private Player player = new Player();
 
     public List<Player> createPlayers(){
         List<Player> players = new ArrayList<>();
@@ -39,7 +38,10 @@ public class Game {
         System.out.println("After shuffling the cards to players: The trump is " + trump);
     }
 
-//    public void attack(List<Player> players){
-//        System.out.println(player.attack());
-//    }
+    public void attack(List<Player> listOfPlayers){
+        for(Player player: listOfPlayers){
+            Card tempCard = player.getHand().iterator().next();
+            System.out.println(tempCard);
+        }
+    }
 }
