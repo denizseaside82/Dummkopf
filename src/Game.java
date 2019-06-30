@@ -34,14 +34,14 @@ public class Game {
     }
 
     public void showTrump(){
-        Card trump = dealer.getTrump();
+        Card trump = dealer.getTrumpFromDeck();
         System.out.println("After shuffling the cards to players: The trump is " + trump);
     }
 
-    public void attack(List<Player> listOfPlayers){
-        for(Player player: listOfPlayers){
-            Card tempCard = player.getHand().iterator().next();
-            System.out.println(tempCard);
-        }
-    }
+//    public void attack(List<Player> listOfPlayers){
+//        for(Player player: listOfPlayers){
+//            Card tempCard = player.getHand().iterator().next();
+//            System.out.println(tempCard);
+//        }
+//    }
 }

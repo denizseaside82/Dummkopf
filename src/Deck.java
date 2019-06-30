@@ -4,6 +4,7 @@ public class Deck{
     private List<Card> deck;
     private static final Random GENERATOR = new Random();
     private static final int DECK_SIZE = 36;
+    private static Card trump;
 
     public Deck () {
         deck = new ArrayList<>(DECK_SIZE);
@@ -28,7 +29,12 @@ public class Deck{
     }
 
     public Card trump(){
-        return deck.remove(0);
+        trump = deck.remove(0);
+        return trump;
+    }
+
+    public static Card getTrump() {
+        return trump;
     }
 
     @Override

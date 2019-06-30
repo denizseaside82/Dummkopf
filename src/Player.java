@@ -38,18 +38,9 @@ public class Player {
         }
     }
 
-//    public Card attack(){
-//        List<Card> attack = new ArrayList<>(1);
-//        Card attackCard = attack.add(hand.remove(GENERATOR.nextInt(1)));
-//        return attackCard;
-//    }
+    public Card attack(){
 
-//    for(Card c : pack) {
-//        if(c != null && c.getSuit().equals(suit)){
-//            cards.add(c);
-//        }
-//    }
-//    https://stackoverflow.com/questions/4659316/how-to-find-all-the-cards-of-a-suit-specified-by-string-e-g-spades-in-java
+    }
 
 }
 
