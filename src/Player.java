@@ -38,9 +38,9 @@ public class Player {
         }
     }
 
-    public Card attack(){
-
-    }
+//    public Card attack(){
+//
+//    }
 
 }
 
