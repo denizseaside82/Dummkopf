@@ -5,6 +5,7 @@ import java.util.Scanner;
 public class Game {
     private Dealer dealer;
     private int numberOfPlayers;
+    private Card trump;
 
     public List<Player> createPlayers(){
         List<Player> players = new ArrayList<>();
@@ -34,14 +35,22 @@ public class Game {
     }
 
     public void showTrump(){
-        Card trump = dealer.getTrumpFromDeck();
+        trump = dealer.getTrumpFromDeck();
         System.out.println("After shuffling the cards to players: The trump is " + trump);
     }
 
-//    public void attack(List<Player> listOfPlayers){
-//        for(Player player: listOfPlayers){
-//            Card tempCard = player.getHand().iterator().next();
-//            System.out.println(tempCard);
-//        }
-//    }
+    public void attack(List<Player> listOfPlayers){
+        int i = 0;
+        for(Player player: listOfPlayers){
+            List<Card> tempCard = player.getHand();
+            while(i<6) {
+//                if (tempCard != trump) {
+                    System.out.println(tempCard.get(i));
+                    System.out.println(trump);
+//                }
+                i++;
+            }
+
+        }
+    }
 }
