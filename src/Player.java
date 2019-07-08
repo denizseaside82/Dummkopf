@@ -38,10 +38,20 @@ public class Player {
         }
     }
 
-//    public Card attack(){
-//
-//    }
+    public void attack() {
+        int i = 0;
+//        for (Player player : listOfPlayers) {
+            List<Card> tempCard = hand;
+            while (i < 6) {
+//                if (tempCard != trump) {
+                System.out.println(tempCard.get(i));
+//                System.out.println(trump);
+//                }
+                i++;
+            }
 
+//        }
+    }
 }
 
 

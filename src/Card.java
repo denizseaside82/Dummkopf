@@ -7,6 +7,14 @@ public class Card {
         this.suit = suit;
     }
 
+    public Rank getRank() {
+        return this.rank;
+    }
+
+    public Suit getSuit() {
+        return this.suit;
+    }
+
     public enum Color{
         RED, BLACK
     }

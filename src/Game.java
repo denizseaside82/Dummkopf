@@ -38,19 +38,4 @@ public class Game {
         trump = dealer.getTrumpFromDeck();
         System.out.println("After shuffling the cards to players: The trump is " + trump);
     }
-
-    public void attack(List<Player> listOfPlayers){
-        int i = 0;
-        for(Player player: listOfPlayers){
-            List<Card> tempCard = player.getHand();
-            while(i<6) {
-//                if (tempCard != trump) {
-                    System.out.println(tempCard.get(i));
-                    System.out.println(trump);
-//                }
-                i++;
-            }
-
-        }
-    }
 }

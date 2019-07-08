@@ -1,3 +1,4 @@
+import java.util.Iterator;
 import java.util.List;
 
 public class Main {
@@ -19,7 +20,12 @@ public class Main {
             newGame.showTrump();
         }
         //Play clockwise
-        newGame.attack(players);
+        for(Player player: players){
+            Iterator tempCard = player.getHand().listIterator();
+            tempCard.toString();
+            tempCard.
+            player.attack();
+        }
         //Shuffle deck and deal each player 6 cards
 
         //Let the bottom card of the stock is turned and placed face up on the table
