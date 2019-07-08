@@ -22,8 +22,6 @@ public class Main {
         //Play clockwise
         for(Player player: players){
             Iterator tempCard = player.getHand().listIterator();
-            tempCard.toString();
-            tempCard.
             player.attack();
         }
         //Shuffle deck and deal each player 6 cards
