@@ -38,4 +38,8 @@ public class Game {
         trump = dealer.getTrumpFromDeck();
         System.out.println("After shuffling the cards to players: The trump is " + trump);
     }
+
+    public Card getTrump() {
+        return trump;
+    }
 }

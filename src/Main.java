@@ -20,11 +20,13 @@ public class Main {
             newGame.showTrump();
         }
         //Play clockwise
+        Card trump = newGame.getTrump();
         for(Player player: players){
-            Iterator tempCard = player.getHand().listIterator();
-            player.attack();
+            //Iterator tempCard = player.getHand().listIterator();
+            player.getSuitInHand();
         }
         //Shuffle deck and deal each player 6 cards
+
 
         //Let the bottom card of the stock is turned and placed face up on the table
     }

@@ -4,6 +4,7 @@ public class Player {
     private String name;
     private int points;
     private List<Card> hand;
+    private Dealer dealer;
     private static final Random GENERATOR = new Random();
 
     public Player() {
@@ -38,19 +39,16 @@ public class Player {
         }
     }
 
-    public void attack() {
+    public void getSuitInHand() {
         int i = 0;
-//        for (Player player : listOfPlayers) {
             List<Card> tempCard = hand;
             while (i < 6) {
-//                if (tempCard != trump) {
-                System.out.println(tempCard.get(i));
-//                System.out.println(trump);
-//                }
+                if(dealer.getTrumpFromDeck().getSuit() == tempCard.get(i).getSuit()){
+                    System.out.println("Bingo");
+                }
                 i++;
             }
 
-//        }
     }
 }
 

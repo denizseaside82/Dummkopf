@@ -21,7 +21,7 @@ public class Dealer {
         }
     }
 
-    public Card getTrumpFromDeck(){
+    public final Card getTrumpFromDeck(){
         return deck.trump();
     }
 }
