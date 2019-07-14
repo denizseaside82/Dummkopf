@@ -10,22 +10,20 @@ public class Main {
         //Create deck
         if(players != null){
             newGame.createDeck(players);
-
             for (Player player: players){
                     System.out.println("Player : " + player.getName());
                     player.showHand();
                     System.out.println("\n");
             }
-
             newGame.showTrump();
         }
+
         //Play clockwise
-        Card trump = newGame.getTrump();
         for(Player player: players){
-            //Iterator tempCard = player.getHand().listIterator();
             player.getSuitInHand();
         }
-        //Shuffle deck and deal each player 6 cards
+
+        //Shuffle deck and dealDeck each player 6 cards
 
 
         //Let the bottom card of the stock is turned and placed face up on the table

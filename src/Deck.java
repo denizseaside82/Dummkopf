@@ -1,35 +1,35 @@
 import java.util.*;
 
 public class Deck{
-    private List<Card> deck;
+    private static List<Card> cards;
     private static final Random GENERATOR = new Random();
     private static final int DECK_SIZE = 36;
     private static Card trump;
 
     public Deck () {
-        deck = new ArrayList<>(DECK_SIZE);
+        cards = new ArrayList<>(DECK_SIZE);
 
         for (final Card.Suit suit : Card.Suit.values()) {
             for (final Card.Rank rank : Card.Rank.values()) {
-                deck.add(new Card(rank, suit));
+                cards.add(new Card(rank, suit));
             }
         }
     }
 
     public List<Card> getDeck(){
-        return deck;
+        return cards;
     }
 
-    public List<Card> deal(int size){
+    public List<Card> dealDeck(int size){
         List<Card> hand = new ArrayList<>(size);
         for(int dealCount=0; dealCount < size; dealCount++){
-            hand.add(deck.remove(GENERATOR.nextInt(deck.size())));
+            hand.add(cards.remove(GENERATOR.nextInt(cards.size())));
         }
         return hand;
     }
 
-    public Card trump(){
-        trump = deck.remove(0);
+    public static final Card setTrump(){
+        trump = cards.remove(0);
         return trump;
     }
 
@@ -37,14 +37,14 @@ public class Deck{
         return trump;
     }
 
-    @Override
-    public String toString(){
-        StringBuilder builder = new StringBuilder();
-        for(int i = 0; i < deck.size(); i++){
-            builder.append(i + " ");
-            builder.append(deck.get(i).toString());
-            builder.append(System.getProperty("line.separator"));
-        }
-        return builder.toString();
-    }
+//    @Override
+//    public String toString(){
+//        StringBuilder builder = new StringBuilder();
+//        for(int i = 0; i < cards.size(); i++){
+//            builder.append(i + " ");
+//            builder.append(cards.get(i).toString());
+//            builder.append(System.getProperty("line.separator"));
+//        }
+//        return builder.toString();
+//    }
 }

@@ -35,11 +35,7 @@ public class Game {
     }
 
     public void showTrump(){
-        trump = dealer.getTrumpFromDeck();
-        System.out.println("After shuffling the cards to players: The trump is " + trump);
-    }
-
-    public Card getTrump() {
-        return trump;
+        trump = Dealer.setTrumpFromDeck();
+        System.out.println("After shuffling the cards to players: The setTrump is " + trump);
     }
 }

@@ -3,7 +3,7 @@ import java.util.Collections;
 import java.util.List;
 
 public class Dealer {
-    private Deck deck;
+    private static Deck deck;
     private List<Player> players;
 
     public Dealer(int numberOfPlayers) {
@@ -17,11 +17,15 @@ public class Dealer {
 
     public void dealShuffledCardsToPlayers(List<Player> players){
         for(Player player: players){
-            player.setHand(deck.deal(6));
+            player.setHand(deck.dealDeck(6));
         }
     }
 
-    public final Card getTrumpFromDeck(){
-        return deck.trump();
+    public static final Card setTrumpFromDeck(){
+        return Deck.setTrump();
+    }
+
+    public static Card getTrumpFromDeck(){
+        return Deck.getTrump();
     }
 }
