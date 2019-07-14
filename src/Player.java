@@ -19,10 +19,6 @@ public class Player {
     }
 
     public void showHand(){
-//        for(int i=0; i<this.hand.size(); i++){
-//            System.out.println(this.hand.get(i));
-//        }
-
         for (Card cards: hand) {
             System.out.println(cards.toString());
         }
@@ -32,7 +28,7 @@ public class Player {
         int i = 0;
             while (i < 6) {
                 if(Dealer.getTrumpFromDeck().getSuit() == this.hand.get(i).getSuit()){
-                    System.out.println("Bingo");
+                    System.out.println("Player : " + this.getName() + " has a same suit at row " + (i+1));
                 }
                 i++;
             }
