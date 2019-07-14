@@ -5,7 +5,6 @@ import java.util.Scanner;
 public class Game {
     private Dealer dealer;
     private int numberOfPlayers;
-    private Card trump;
 
     public List<Player> createPlayers(){
         List<Player> players = new ArrayList<>();
@@ -35,7 +34,7 @@ public class Game {
     }
 
     public void showTrump(){
-        trump = Dealer.setTrumpFromDeck();
+        Card trump = Dealer.setTrumpFromDeck();
         System.out.println("After shuffling the cards to players: The setTrump is " + trump);
     }
 }
