@@ -1,3 +1,5 @@
+import java.util.List;
+
 public class Card {
     private final Rank rank;
     private final Suit suit;
@@ -39,7 +41,7 @@ public class Card {
         }
     }
 
-    public enum Rank{
+    public enum Rank {
         ACE(1, "Ace"), SIX(6, "6"), SEVEN(7, "7"),
         EIGHT(8, "8"), NINE(9, "9"), TEN(10, "10"), JACK(11, "Jack"), QUEEN(12, "Queen"), KING(13, "King");
 

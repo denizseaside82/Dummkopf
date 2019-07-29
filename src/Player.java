@@ -28,43 +28,43 @@ public class Player {
         int lowestCard = 13;
         int foundCard = 0;
         int i = 0;
-            while (i < 6) {
-                if(Dealer.getTrumpFromDeck().getSuit() == this.hand.get(i).getSuit()){
+        while (i < 6) {
+            if(Dealer.getTrumpFromDeck().getSuit() == this.hand.get(i).getSuit()){
 //                    System.out.println("Player : " + this.getName() + " has a same suit at row " + (i+1));
-                    int actualCard = this.hand.get(i).getRank().getValue();
+                int actualCard = this.hand.get(i).getRank().getValue();
 
-                    switch (actualCard){
-                        case 1:
-                           lowestCard = 1;
-                        case 6:
-                            lowestCard = 6;
-                        case 7:
-                            lowestCard = 7;
-                        case 8:
-                            lowestCard = 8;
-                        case 9:
-                            lowestCard = 9;
-                        case 10:
-                            lowestCard = 10;
-                        case 11:
-                            lowestCard = 11;
-                        case 12:
-                            lowestCard = 12;
-                        case 13:
-                            lowestCard = 13;
-                    }
+//                switch (actualCard){
+//                    case 1:
+//                        lowestCard = 1;
+//                    case 6:
+//                        lowestCard = 6;
+//                    case 7:
+//                        lowestCard = 7;
+//                    case 8:
+//                        lowestCard = 8;
+//                    case 9:
+//                        lowestCard = 9;
+//                    case 10:
+//                        lowestCard = 10;
+//                    case 11:
+//                        lowestCard = 11;
+//                    case 12:
+//                        lowestCard = 12;
+//                    case 13:
+//                        lowestCard = 13;
+//                }
 
 //                    foundCard = actualCard <= lowestCard ? actualCard : lowestCard;
-                    if (actualCard <= lowestCard ){
-                        foundCard = actualCard;
-                    }
-
-//                    System.out.println("Player : " + this.getName() + " " + foundCard);
+                if (actualCard < lowestCard ){
+                    lowestCard = actualCard;
                 }
-                i++;
-            }
 
-            return foundCard;
+                    System.out.println("Player : " + this.getName() + " has " + this.hand.get(i));
+            }
+            i++;
+        }
+
+        return lowestCard;
     }
 }
 

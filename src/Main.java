@@ -1,3 +1,4 @@
+import java.util.ArrayList;
 import java.util.List;
 
 public class Main {
@@ -19,7 +20,8 @@ public class Main {
 
                 //Play clockwise
                 for (Player player: players){
-                    player.getSuitInHand();
+                    int temp = player.getSuitInHand();
+                    System.out.println(temp);
                 }
             }
             //Shuffle deck and dealDeck each player 6 cards
