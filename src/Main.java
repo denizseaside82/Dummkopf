@@ -1,4 +1,3 @@
-import java.util.ArrayList;
 import java.util.List;
 
 public class Main {
@@ -21,7 +20,9 @@ public class Main {
                 //Play clockwise
                 for (Player player: players){
                     int temp = player.getSuitInHand();
-                    System.out.println(temp);
+                    System.out.println("The smallest card from " + player.getName() + " is " + temp);
+                    System.out.println("\n");
+
                 }
             }
             //Shuffle deck and dealDeck each player 6 cards
