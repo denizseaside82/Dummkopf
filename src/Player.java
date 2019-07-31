@@ -27,20 +27,26 @@ public class Player {
         int lowestCard = 14;
         int i = 0;
         int actualCard;
-//        List<Integer> countTrump = new ArrayList<>();
+        List<Integer> countTrump = new ArrayList<>();
         while (i < 6) {
             if (Dealer.getTrumpFromDeck().getSuit() == this.hand.get(i).getSuit()) {
                 actualCard = this.hand.get(i).getRank().getValue();
 //                countTrump.add(actualCard);
 
                 if (actualCard < lowestCard) {
+                    if(i == 5 && this.hand.size() > 1 && actualCard == 1){
+                        continue;
+                    }
                     lowestCard = actualCard;
                 }
                 System.out.println("Player : " + this.getName() + " has " + this.hand.get(i));
             }else{
-                if(i == 5 && lowestCard == 14){
-                    System.out.println("Player " + this.getName() + "has no TRUMP");
+                if(i == 5 && lowestCard == 14) {
+                    System.out.println("Player " + this.getName() + " has no TRUMP");
                 }
+//                }else if(i == 5 && this.hand.size() == 1 && this.hand.get(i).getRank() == Card.Rank.ACE ){
+//                    System.out.println("");
+//                }
             }
             i++;
         }
