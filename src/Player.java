@@ -31,12 +31,14 @@ public class Player {
         while (i < 6) {
             if (Dealer.getTrumpFromDeck().getSuit() == this.hand.get(i).getSuit()) {
                 actualCard = this.hand.get(i).getRank().getValue();
-//                countTrump.add(actualCard);
+                countTrump.add(actualCard);
 
                 if (actualCard < lowestCard) {
-                    if(i == 5 && this.hand.size() > 1 && actualCard == 1){
-                        continue;
-                    }
+                    System.out.println("Array size" + countTrump.size());
+//                    if(countTrump.size() > 1 && countTrump.contains(1)){
+//                        System.out.println("Gotcha");
+////                        continue;
+//                    }
                     lowestCard = actualCard;
                 }
                 System.out.println("Player : " + this.getName() + " has " + this.hand.get(i));
