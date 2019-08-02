@@ -34,14 +34,22 @@ public class Player {
                 countTrump.add(actualCard);
 
                 if (actualCard < lowestCard) {
-                    System.out.println("Array size" + countTrump.size());
-//                    if(countTrump.size() > 1 && countTrump.contains(1)){
-//                        System.out.println("Gotcha");
-////                        continue;
+                    if(countTrump.size() > 1){
+                        for (int index : countTrump){
+                            if(index == 1){
+                                System.out.println("Gotcha");
+                                break;
+                            }
+                        }
+                    }
+//                    if(countTrump.contains(1) == true){
+//                        System.out.println("It contains ACE card as alone");
 //                    }
                     lowestCard = actualCard;
                 }
                 System.out.println("Player : " + this.getName() + " has " + this.hand.get(i));
+//                System.out.println("Array size" + countTrump.size());
+
             }else{
                 if(i == 5 && lowestCard == 14) {
                     System.out.println("Player " + this.getName() + " has no TRUMP");
