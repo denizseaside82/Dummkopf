@@ -36,8 +36,11 @@ public class Player {
             i++;
         }
 
-        if (countTrump.size() >! 1 && countTrump.get(0) == 1) {
-            countTrump.remove(0);
+//        if (countTrump.size() != 1 && countTrump.get(0) == 1) {
+//            countTrump.remove(0);
+//        }
+        if (countTrump.contains(1)) {
+            countTrump.remove(countTrump.indexOf("1"));
         }
 
         Iterator countIterator = countTrump.iterator();
