@@ -36,11 +36,8 @@ public class Player {
             i++;
         }
 
-//        if (countTrump.size() != 1 && countTrump.get(0) == 1) {
-//            countTrump.remove(0);
-//        }
-        if (countTrump.contains(1)) {
-            countTrump.remove(countTrump.indexOf("1"));
+        if (countTrump.size() > 1 && countTrump.contains(1)) {
+            countTrump.remove(countTrump.indexOf(1));
         }
 
         Iterator countIterator = countTrump.iterator();
@@ -49,7 +46,8 @@ public class Player {
 
             if (actualCard < lowestCard) {
                 lowestCard = actualCard;
-            } else if (i == 5 && lowestCard == 14) {
+            }
+            if (i == 5 && lowestCard == 14) {
                 System.out.println("Player " + this.getName() + " has no TRUMP");
             }
             System.out.println("Player : " + this.getName() + " has " + actualCard);
