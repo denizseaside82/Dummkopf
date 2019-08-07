@@ -47,10 +47,10 @@ public class Player {
             if (actualCard < lowestCard) {
                 lowestCard = actualCard;
             }
-            if (i == 5 && lowestCard == 14) {
-                System.out.println("Player " + this.getName() + " has no TRUMP");
-            }
-            System.out.println("Player : " + this.getName() + " has " + actualCard);
+//            if (i == 5 && lowestCard == 14) {
+//                System.out.println("Player " + this.getName() + " has no TRUMP");
+//            }
+//            System.out.println("Player : " + this.getName() + " has " + actualCard);
         }
 
         return lowestCard;
