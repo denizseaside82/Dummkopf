@@ -38,7 +38,9 @@ public class Main {
                     for (Map.Entry<Player, Integer> secondLowestTrump : lowestTrump.entrySet()) {
                         Player key2 = secondLowestTrump.getKey();
                         int value2 = secondLowestTrump.getValue();
-
+                        if(value1 == -1){
+                            value1.
+                        }
                         if (value1 < value2) {
 //                            System.out.println("Player : " + key1.getName() + " is the first attacker");
                             attackerFound = key1.getName();
