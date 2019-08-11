@@ -56,8 +56,8 @@ public class Player {
 //            System.out.println("Player : " + this.getName() + " has " + actualCard);
         }
         if (lowestCard == 14) {
-            return -1;
 //            System.out.println("Player " + this.getName() + " has no TRUMP");
+            return -1;
         }else {
             return lowestCard;
         }

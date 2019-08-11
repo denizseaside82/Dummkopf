@@ -26,8 +26,12 @@ public class Main {
                 for (Player player : players) {
                     int cardNumber = player.getSuitInHand();
                     lowestTrump.put(player, cardNumber);
-                    System.out.println("The smallest card from " + player.getName() + " is " + player.getSuitInHand());
+                    if(cardNumber == -1){
+                        System.out.println("Player " + player.getName() + " has no TRUMP");
+                    }else {
+                        System.out.println("The smallest card from " + player.getName() + " is " + player.getSuitInHand());
 //                    System.out.println("\n");
+                    }
                 }
                 System.out.println("\n");
                 String attackerFound = "";
@@ -39,13 +43,14 @@ public class Main {
                         Player key2 = secondLowestTrump.getKey();
                         int value2 = secondLowestTrump.getValue();
                         if(value1 == -1){
-                            value1.
-                        }
-                        if (value1 < value2) {
+                            continue;
+                        }else if(value1 < value2) {
 //                            System.out.println("Player : " + key1.getName() + " is the first attacker");
                             attackerFound = key1.getName();
                         }
                     }
+
+
                 }
 
                 System.out.println("Player : " + attackerFound+ " is the first attacker");
