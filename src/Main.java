@@ -39,11 +39,11 @@ public class Main {
                     Player key1 = tempLowestTrump.getKey();
                     int value1 = tempLowestTrump.getValue();
 
-                    for (Map.Entry<Player, Integer> secondLowestTrump : lowestTrump.entrySet()) {
+                    for (Map.Entry<Player, Integer> secondLowestTrump : tempLowestTrump.getValue()) {
                         Player key2 = secondLowestTrump.getKey();
                         int value2 = secondLowestTrump.getValue();
-                        if(value1 == -1){
-                            continue;
+                        if(value1 == -1 || value2 == -1){
+                            break;
                         }else if(value1 < value2) {
 //                            System.out.println("Player : " + key1.getName() + " is the first attacker");
                             attackerFound = key1.getName();
