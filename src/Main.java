@@ -35,13 +35,14 @@ public class Main {
                 }
                 System.out.println("\n");
                 String attackerFound = "";
-                for (Map.Entry<Player, Integer> tempLowestTrump : lowestTrump.entrySet()) {
-                    Player key1 = tempLowestTrump.getKey();
-                    int value1 = tempLowestTrump.getValue();
+                for (Map.Entry<Player, Integer> entry1 : lowestTrump.entrySet()) {
+                    Player key1 = entry1.getKey();
+                    int value1 = entry1.getValue();
 
-                    for (Map.Entry<Player, Integer> secondLowestTrump : tempLowestTrump.getValue()) {
-                        Player key2 = secondLowestTrump.getKey();
-                        int value2 = secondLowestTrump.getValue();
+                    for (Map.Entry<Player, Integer> entry2 : lowestTrump.entrySet()) {
+                        Player key2 = entry2.getKey();
+                        int value2 = entry2.getValue();
+
                         if(value1 == -1 || value2 == -1){
                             break;
                         }else if(value1 < value2) {
