@@ -1,6 +1,7 @@
 import com.sun.jdi.Value;
 
 import java.util.HashMap;
+import java.util.Iterator;
 import java.util.List;
 import java.util.Map;
 
@@ -35,24 +36,31 @@ public class Main {
                 }
                 System.out.println("\n");
                 String attackerFound = "";
-                for (Map.Entry<Player, Integer> entry1 : lowestTrump.entrySet()) {
-                    Player key1 = entry1.getKey();
-                    int value1 = entry1.getValue();
 
-                    for (Map.Entry<Player, Integer> entry2 : lowestTrump.entrySet()) {
-                        Player key2 = entry2.getKey();
-                        int value2 = entry2.getValue();
-
-                        if(value1 == -1 || value2 == -1){
-                            break;
-                        }else if(value1 < value2) {
-//                            System.out.println("Player : " + key1.getName() + " is the first attacker");
-                            attackerFound = key1.getName();
-                        }
-                    }
-
+                Iterator iterator = lowestTrump.entrySet().iterator();
+                while(iterator.hasNext()){
+                    Map.Entry element = (Map.Entry) iterator.next();
+                    int number = (int)element.getValue();
 
                 }
+//                for (Map.Entry<Player, Integer> entry1 : lowestTrump.entrySet()) {
+//                    Player key1 = entry1.getKey();
+//                    int value1 = entry1.getValue();
+//
+//                    for (Map.Entry<Player, Integer> entry2 : lowestTrump.entrySet()) {
+//                        Player key2 = entry2.getKey();
+//                        int value2 = entry2.getValue();
+//
+//
+//
+//                        if(value1 == -1 || value2 == -1){
+//                            break;
+//                        }else if(value1 < value2 && (value1 != 1 || value2 != 1)) {
+////                            System.out.println("Player : " + key1.getName() + " is the first attacker");
+//                            attackerFound = key1.getName();
+//                        }
+//                    }
+//                }
 
                 System.out.println("Player : " + attackerFound+ " is the first attacker");
 
