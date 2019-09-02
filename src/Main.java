@@ -1,9 +1,6 @@
 import com.sun.jdi.Value;
 
-import java.util.HashMap;
-import java.util.Iterator;
-import java.util.List;
-import java.util.Map;
+import java.util.*;
 
 public class Main {
     public static void main(String[] args) {
@@ -37,32 +34,20 @@ public class Main {
                 System.out.println("\n");
                 String attackerFound = "";
 
-                Iterator iterator = lowestTrump.entrySet().iterator();
-                while(iterator.hasNext()){
-                    Map.Entry element = (Map.Entry) iterator.next();
-                    int number = (int)element.getValue();
+//                Optional<Integer> result = lowestTrump.values().stream().min(Integer::compareTo);
+
+                Optional<Object> result = lowestTrump.entrySet()
+                        .stream()
+                        .filter(c -> c.getValue() != null)
+                        .min(Comparator.comparingInt(Map.Entry::getValue))
+                        .map(Map.Entry::getKey);
+//                attackerFound = result != null && result.get() != -1 ? result.get().toString() : null;
+                if(result != null && result.get() != -1) {
+//                    attackerFound = result.get().toString();
+                    System.out.println("Player : " + result.get().toString() + " is the first attacker");
 
                 }
-//                for (Map.Entry<Player, Integer> entry1 : lowestTrump.entrySet()) {
-//                    Player key1 = entry1.getKey();
-//                    int value1 = entry1.getValue();
-//
-//                    for (Map.Entry<Player, Integer> entry2 : lowestTrump.entrySet()) {
-//                        Player key2 = entry2.getKey();
-//                        int value2 = entry2.getValue();
-//
-//
-//
-//                        if(value1 == -1 || value2 == -1){
-//                            break;
-//                        }else if(value1 < value2 && (value1 != 1 || value2 != 1)) {
-////                            System.out.println("Player : " + key1.getName() + " is the first attacker");
-//                            attackerFound = key1.getName();
-//                        }
-//                    }
-//                }
 
-                System.out.println("Player : " + attackerFound+ " is the first attacker");
 
             }
             //Shuffle deck and dealDeck each player 6 cards
