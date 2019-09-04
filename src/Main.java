@@ -28,24 +28,18 @@ public class Main {
                         System.out.println("Player " + player.getName() + " has no TRUMP");
                     }else {
                         System.out.println("The smallest card from " + player.getName() + " is " + player.getSuitInHand());
-//                    System.out.println("\n");
                     }
                 }
                 System.out.println("\n");
-                String attackerFound = "";
 
-//                Optional<Integer> result = lowestTrump.values().stream().min(Integer::compareTo);
-
-                Optional<Object> result = lowestTrump.entrySet()
+                Optional<Player> result = lowestTrump.entrySet()
                         .stream()
-                        .filter(c -> c.getValue() != null)
+                        .filter(c -> c.getValue() != -1)
                         .min(Comparator.comparingInt(Map.Entry::getValue))
                         .map(Map.Entry::getKey);
-//                attackerFound = result != null && result.get() != -1 ? result.get().toString() : null;
-                if(result != null && result.get() != -1) {
-//                    attackerFound = result.get().toString();
-                    System.out.println("Player : " + result.get().toString() + " is the first attacker");
 
+                if(result != null && result.get().getSuitInHand() != -1) {
+                    System.out.println("Player : " + result.get().getName() + " is the first attacker");
                 }
 
 

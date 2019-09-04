@@ -17,11 +17,11 @@ public class Card {
         return this.suit;
     }
 
-    public enum Color{
+    public enum Color {
         RED, BLACK
     }
 
-    public enum Suit{
+    public enum Suit {
         HEARTS(Color.RED, "Hearts"), DIAMONDS(Color.RED, "diamonds"), SPADES(Color.BLACK, "spades"), CLUBS(Color.BLACK, "clubs");
 
         private Color color;
@@ -63,7 +63,7 @@ public class Card {
     }
 
     @Override
-    public String toString () {
+    public String toString() {
         return this.rank + " of " + this.suit;
     }
 }

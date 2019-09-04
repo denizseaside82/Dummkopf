@@ -11,21 +11,21 @@ public class Dealer {
         this.players = new ArrayList<>(numberOfPlayers);
     }
 
-    public void shuffleDeck(){
+    public void shuffleDeck() {
         Collections.shuffle(deck.getDeck());
     }
 
-    public void dealShuffledCardsToPlayers(List<Player> players){
-        for(Player player: players){
+    public void dealShuffledCardsToPlayers(List<Player> players) {
+        for (Player player : players) {
             player.setHand(deck.dealDeck(6));
         }
     }
 
-    public static final Card setTrumpFromDeck(){
+    public static final Card setTrumpFromDeck() {
         return Deck.setTrump();
     }
 
-    public static Card getTrumpFromDeck(){
+    public static Card getTrumpFromDeck() {
         return Deck.getTrump();
     }
 }
