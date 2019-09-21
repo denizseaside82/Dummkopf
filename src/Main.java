@@ -17,16 +17,17 @@ public class Main {
                     player.showHand();
                     System.out.println("\n");
                 }
+                //Let the bottom card of the stock is turned and placed face up on the table
                 newGame.showTrump();
 
-                //Play clockwise
+                //Shuffle deck and dealDeck each player 6 cards
                 Map<Player, Integer> lowestTrump = new HashMap<Player, Integer>();
                 for (Player player : players) {
                     int cardNumber = player.getSuitInHand();
                     lowestTrump.put(player, cardNumber);
-                    if(cardNumber == -1){
+                    if (cardNumber == -1) {
                         System.out.println("Player " + player.getName() + " has no TRUMP");
-                    }else {
+                    } else {
                         System.out.println("The smallest card from " + player.getName() + " is " + player.getSuitInHand());
                     }
                 }
@@ -38,16 +39,15 @@ public class Main {
                         .min(Comparator.comparingInt(Map.Entry::getValue))
                         .map(Map.Entry::getKey);
 
-                if(result != null && result.get().getSuitInHand() != -1) {
+                if (result != null && result.get().getSuitInHand() != -1) {
                     System.out.println("Player : " + result.get().getName() + " is the first attacker");
                 }
 
+                System.out.println(lowestTrump.get(result.get().getName()).);
 
             }
-            //Shuffle deck and dealDeck each player 6 cards
 
 
-            //Let the bottom card of the stock is turned and placed face up on the table
         } catch (Exception e) {
             e.printStackTrace();
         }
