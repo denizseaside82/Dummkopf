@@ -1,16 +1,26 @@
 import java.util.*;
 
 public class Player {
+    private int Id;
     private String name;
     private List<Card> hand;
 
+    private static int idNumber;
+
     public Player(String name) {
+        idNumber += idNumber;
+
+        this.Id = idNumber;
         this.name = name;
         this.hand = new ArrayList<>();
     }
 
     public String getName() {
         return name;
+    }
+
+    public int getId() {
+        return Id;
     }
 
     public void setHand(List<Card> hand) {

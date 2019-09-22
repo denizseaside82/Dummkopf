@@ -21,7 +21,7 @@ public class Main {
                 newGame.showTrump();
 
                 //Shuffle deck and dealDeck each player 6 cards
-                Map<Player, Integer> lowestTrump = new HashMap<Player, Integer>();
+                Map<Player, Integer> lowestTrump = new LinkedHashMap<Player, Integer>();
                 for (Player player : players) {
                     int cardNumber = player.getSuitInHand();
                     lowestTrump.put(player, cardNumber);
@@ -29,6 +29,7 @@ public class Main {
                         System.out.println("Player " + player.getName() + " has no TRUMP");
                     } else {
                         System.out.println("The smallest card from " + player.getName() + " is " + player.getSuitInHand());
+                        System.out.println("Player id " + player.getId());
                     }
                 }
                 System.out.println("\n");
@@ -43,8 +44,9 @@ public class Main {
                     System.out.println("Player : " + result.get().getName() + " is the first attacker");
                 }
 
-                System.out.println(lowestTrump.get(result.get().getName()).);
-
+                ArrayList<Player> defender = new ArrayList<Player>(lowestTrump.keySet());
+//                System.out.println(lowestTrump.get(defender.get(result.get().)));
+//                System.out.println(lowestTrump.get().g);
             }
 
 
