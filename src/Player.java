@@ -4,13 +4,12 @@ public class Player {
     private int Id;
     private String name;
     private List<Card> hand;
+    private static int count = 0;
 
     private static int idNumber;
 
     public Player(String name) {
-        idNumber += idNumber;
-
-        this.Id = idNumber;
+        setId(++idNumber);
         this.name = name;
         this.hand = new ArrayList<>();
     }
@@ -25,6 +24,10 @@ public class Player {
 
     public void setHand(List<Card> hand) {
         this.hand = hand;
+    }
+
+    public void setId(int id) {
+        this.Id = id;
     }
 
     public void showHand() {

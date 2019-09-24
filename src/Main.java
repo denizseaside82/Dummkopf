@@ -1,5 +1,6 @@
 import com.sun.jdi.Value;
 
+import java.sql.SQLOutput;
 import java.util.*;
 
 public class Main {
@@ -29,7 +30,7 @@ public class Main {
                         System.out.println("Player " + player.getName() + " has no TRUMP");
                     } else {
                         System.out.println("The smallest card from " + player.getName() + " is " + player.getSuitInHand());
-                        System.out.println("Player id " + player.getId());
+//                        System.out.println("Player id " + player.getId());
                     }
                 }
                 System.out.println("\n");
@@ -44,9 +45,15 @@ public class Main {
                     System.out.println("Player : " + result.get().getName() + " is the first attacker");
                 }
 
-                ArrayList<Player> defender = new ArrayList<Player>(lowestTrump.keySet());
-//                System.out.println(lowestTrump.get(defender.get(result.get().)));
-//                System.out.println(lowestTrump.get().g);
+                List<Player> searchDefender = new ArrayList<Player>(lowestTrump.keySet());
+                ListIterator<Player> defender = searchDefender.listIterator();
+                while(defender.hasPrevious()){
+                    Player defenderFound = defender.previous();
+                    System.out.println(defenderFound);
+                }
+//                System.out.println(defender.get(result.get().getId() - 1).getName());
+
+
             }
 
 
