@@ -43,16 +43,17 @@ public class Main {
 
                 if (result != null && result.get().getSuitInHand() != -1) {
                     System.out.println("Player : " + result.get().getName() + " is the first attacker");
+
                 }
 
                 List<Player> searchDefender = new ArrayList<Player>(lowestTrump.keySet());
                 ListIterator<Player> defender = searchDefender.listIterator();
-                while(defender.hasPrevious()){
-                    Player defenderFound = defender.previous();
-                    System.out.println(defenderFound);
+                while(defender.hasNext()){
+                    if(defender.equals(result.get().getName())){
+                        Player defenderFound = defender.previous();
+                        System.out.println(defenderFound.getName());
+                    }
                 }
-//                System.out.println(defender.get(result.get().getId() - 1).getName());
-
 
             }
 
