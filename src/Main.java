@@ -49,9 +49,12 @@ public class Main {
                 List<Player> searchDefender = new ArrayList<Player>(lowestTrump.keySet());
                 ListIterator<Player> defender = searchDefender.listIterator();
                 while(defender.hasNext()){
-                    if(defender.equals(result.get().getName())){
+//                    System.out.println(defender.next().getName());
+                    if(defender.next().getName() == result.get().getName()){
+                        System.out.println(defender);
                         Player defenderFound = defender.previous();
                         System.out.println(defenderFound.getName());
+                        break;
                     }
                 }
 
